@@ -1,0 +1,17 @@
+server:
+  port: 9050
+  servlet:
+    context-path: /segundaclasedb/v1
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://ec2-3-228-236-221.compute-1.amazonaws.com:5432/dam5406v8i4tpg
+    username: imhohwzglbeywa
+    password: c8db5be41d842cb3a83c798a60237f2631b4d85b4ea527a563a37c8d83e67453
+  sql:
+    init:
+      plataform: postgres
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    generate-ddl: true
