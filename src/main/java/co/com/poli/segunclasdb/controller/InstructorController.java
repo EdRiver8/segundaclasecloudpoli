@@ -5,10 +5,7 @@ import co.com.poli.segunclasdb.entities.Instructor;
 import co.com.poli.segunclasdb.services.CourseService;
 import co.com.poli.segunclasdb.services.InstructorService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -25,7 +22,7 @@ public class InstructorController {
      }
 
      @PostMapping
-     public Instructor create(Instructor instructor){
+     public Instructor create(@RequestBody Instructor instructor){
         return service.createInstructor(instructor);
      }
 
